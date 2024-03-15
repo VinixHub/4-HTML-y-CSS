@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Nabla&display=swap');
+
+#title-header h1,  #title-header p{
+    margin: 0;
+}
+
+#title-header {
+    font-family: "Honk";
+    padding: 10px;
+    background-color: cyan;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#C3D350 50%, #E6F14A 100%);
+}

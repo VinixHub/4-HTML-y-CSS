@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Nabla&display=swap');
 
-#title-header h1,  #title-header p{
+#title-header h1,  #title-header p, .div2-square1 h1{
     margin: 0;
 }
 
@@ -14,4 +14,95 @@
     justify-content: center;
     align-items: center;
     background: radial-gradient(#C3D350 50%, #E6F14A 100%);
+}
+
+#flex-general-container {
+    background-color: #5F4B66;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#flex-conatainer {
+    background-color: #A7ADC6;
+    margin-top: 5px;
+    border: 1px solid black;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-square-container1 {
+    border: 1px solid black;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Primer cuadrado */
+.div1-square1 {
+    background-color: #CAA8F5;
+    margin: 5px 0px 0px 5px;
+    height: 50%;
+    width: 50%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    cursor: cell;
+}
+
+.div1-square2 {
+    background-color: #9984D4;
+    margin: 5px -40px 0px 0px;
+    height: 50%;
+    width: 47.5%;
+    border-block: 1px solid black;
+    border-right: 1px solid black;
+    cursor: crosshair;
+}
+
+.div1-square3 {
+    background-color: #592E83;
+    margin: -10px 0px 0px 5px;
+    height: 45%;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-inline: 1px solid black;
+    cursor: not-allowed;
+}
+.inner-square-container1 > div {
+    transition: 250ms;
+}
+
+.inner-square-container1 > div:hover{
+    background-color: #C3D350;
+}
+
+/* Segundo cuadrado */
+.inner-square-container2 {
+    border: 1px solid black;
+    height: 100%;
+    width: 25%;
+}
+
+.div2-square1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(images/div2-square1-image.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transition: 2500ms;
+}
+
+.div2-square1:hover {
+    transform: rotateZ(3600deg) scale(2);
 }

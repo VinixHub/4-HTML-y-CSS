@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Nabla&display=swap');
 
-#title-header h1,  #title-header p, .div2-square1 h1{
+#title-header h1,  #title-header p, .div2-square1 h1, .div4-square1 > h1, .div3-square1 > h1{
     margin: 0;
 }
 
@@ -25,7 +25,8 @@
     padding: 5px;
 }
 
-#flex-conatainer {
+/* Section 1 */
+#flex-general-container > section {
     background-color: #A7ADC6;
     margin-top: 5px;
     border: 1px solid black;
@@ -104,5 +105,225 @@
 }
 
 .div2-square1:hover {
-    transform: rotateZ(3600deg) scale(2);
+    transform: rotateZ(3600deg) scale(0.5);
+}
+
+/* Tercer cuadrado */
+.inner-square-container3, .inner-square-container4 {
+    border: 1px solid black;
+    height: 100%;
+    width: 25%;
+    font-size: 2rem;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inner-square-container3 {
+    overflow: auto;
+}
+
+.inner-square-container4 {
+    z-index: 1;
+    overflow: scroll;
+}
+
+/* Section 2 */
+
+#flex-container2 > div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cadetblue;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    margin-inline: 5px;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+.two-square-1:hover {
+    transform: translate(5px, -50px);
+}
+
+.two-square-2:hover {
+    transform: rotate(360deg);
+}
+
+.two-square-3:hover {
+    transform: scale(0.5, 2);
+}
+
+.two-square-4:hover {
+    transform: skew(10deg, 10deg);
+}
+
+.two-square-5:hover {
+    transform: matrix(0.5, 0, 0, 0.5, 10, 10);
+}
+
+.two-square-6:hover {
+    transform: rotateX(180deg);
+}
+
+.two-square-7:hover {
+    transform: rotateZ(180deg);
+}
+
+.two-square-8:hover {
+    background-color: #5F4B66 !important;
+    width: 300px;
+}
+
+/* Section 3 */
+#flex-container3 {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#flex-container3 > div {
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 50%;
+    border-left: 1px dotted black;
+}
+
+
+#first-half > div {
+    background-color: #2F3061;
+    margin-block: 1px;
+    align-self: flex-start;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+#first-half > div:hover {
+    width: 99% !important;
+    height: 300px !important;
+}
+
+.transition1 {
+    transition: width 3s, height 4s, transform 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+
+.transition1:hover {
+    width: 99% !important;
+    height: 300px !important;
+    transform: rotate(180deg);
+}
+
+.transition2 {
+    transition: width 3s, height 5s;
+    transition-timing-function: ease;
+}
+
+.transition3 {
+    transition: width 3s, height 5s;
+    transition-timing-function: ease-in;
+}
+
+.transition4 {
+    transition: width 3s, height 5s;
+    transition-timing-function: ease-out;
+}
+
+.transition5 {
+    transition: width 2s, height 2s;
+    transition-timing-function: ease-in-out;
+}
+
+/* section 4 */
+#second-half > div {
+    width: 100px;
+    height: 20%;
+    border: 1px solid black;
+    background-color: #D84797;
+    margin-block: 1px;
+    margin-left: 1px;
+}
+
+.animation1 {
+    animation-name: ejemplo-animacion1;
+    animation-duration: 2s;
+}
+
+@keyframes ejemplo-animacion1 {
+    from {background-color: #D84797;}
+    to {background-color: #820933;}
+}
+
+.animation2 {
+    animation-name: ejemplo-animation2;
+    animation-duration: 4s;
+}
+
+@keyframes ejemplo-animation2 {
+    0% {background-color: #D84797;}
+    25% {background-color: #820933;}
+    50% {background-color: #3ABEFF;}
+    75% {background-color: #26FFE6;}
+    100% { background-color: #D84797;}
+}
+
+.animation3 {
+    position: relative;
+    animation-name: ejemplo-animation3;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+@keyframes ejemplo-animation3 {
+    0% {background-color: #D84797; left: 0px; top: 0px;}
+    25% {background-color: #820933; left: 200px; top: 0px;}
+    50% {background-color: #3ABEFF; left: 200px; top: 200px;}
+    75% {background-color: #26FFE6; left: 0px; top: 200px;}
+    100% { background-color: #D84797; left: 0px; top: 0px;}
+}
+
+.animation4 {
+    animation-name: ejemplo-animation4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    position: relative;
+    animation-timing-function: cubic-bezier(.07,.62,.87,.3)
+}
+
+@keyframes ejemplo-animation4 {
+    0% {background-color:#D84797; left: 0px;}
+    50% {background-color: #26FFE6; left: 200px;}
+    100% {background-color: #D84797; left: 0px;}
+}
+
+.animation5 {
+    animation-name: ejemplo-animation5;
+    animation-duration: 4s;
+    position: relative;
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ejemplo-animation5 {
+    0% {background-color:#D84797; left: 0px;}
+    50% {background-color: #26FFE6; left: 80%;}
+    100% {background-color: #D84797; left: 0px;}
+}
+
+.animation6 {
+    position: relative;
+    animation: ejemplo-animation6 4s ease-in-out 0s infinite;
+}
+
+@keyframes ejemplo-animation6 {
+    0% {background-color:#D84797; left: 0px;}
+    50% {background-color: #26FFE6; left: 200px;}
+    100% {background-color: #D84797; left: 0px;}
 }

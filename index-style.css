@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Nabla&display=swap');
 
+body { margin: 0px ;}
+
 #title-header h1,  #title-header p, .div2-square1 h1, .div4-square1 > h1, .div3-square1 > h1{
     margin: 0;
 }
